@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6fa;
+    color: #1f2937;
+}
+
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 24px;
+}
+
+h1 { color: #2563eb; }
+h2 { margin-top: 0; font-size: 18px; }
+
+.panel {
+    background: white;
+    border: 1px solid #dbe2ea;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+input, select, button {
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+input[type="text"] { flex: 1; min-width: 180px; }
+select { background: white; }
+
+button {
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+button:hover { background: #1d4ed8; }
+button:disabled { background: #94a3b8; cursor: not-allowed; }
+button.danger { background: #dc2626; }
+button.danger:hover { background: #b91c1c; }
+button.small { padding: 4px 10px; font-size: 14px; }
+button.secondary { background: #64748b; }
+button.secondary:hover { background: #475569; }
+
+.muted { color: #475569; line-height: 1.6; }
+.error { background: #fee2e2; color: #991b1b; border-radius: 6px; padding: 10px 14px; }
+
+.card {
+    border: 1px solid #dbe2ea;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    background: #fff;
+}
+.card-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.card h3 { margin: 0; font-size: 16px; flex: 1; word-break: break-word; }
+.card p { margin: 8px 0 0; line-height: 1.6; }
+
+.rank {
+    background: #2563eb;
+    color: white;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+.score { color: #475569; font-size: 14px; font-variant-numeric: tabular-nums; }
+mark { background: #fde68a; padding: 0 2px; border-radius: 2px; }
+
+pre.fulltext {
+    background: #172033;
+    color: #e2e8f0;
+    padding: 16px;
+    border-radius: 8px;
+    max-height: 300px;
+    overflow: auto;
+    white-space: pre-wrap;
+}

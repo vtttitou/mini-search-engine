@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Search Engine</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <h1>Mini Search Engine</h1>
+        <p class="muted">Upload .txt or text-based .pdf files, then search them with TF-IDF or BM25 ranking.</p>
+        <p id="banner" class="error" role="alert" hidden></p>
+
+        <section class="panel">
+            <h2>1. Collection</h2>
+            <form id="collection-form" class="row">
+                <select id="collection-select" aria-label="Collection"></select>
+                <button type="button" id="delete-collection" class="danger">Delete</button>
+            </form>
+            <form id="new-collection-form" class="row">
+                <input id="new-collection-name" type="text" maxlength="100"
+                       placeholder="New collection name" aria-label="New collection name">
+                <button type="submit">Create</button>
+            </form>
+        </section>
+
+        <section class="panel">
+            <h2>2. Documents</h2>
+            <form id="upload-form" class="row">
+                <input id="file-input" type="file" accept=".txt,.pdf" multiple aria-label="Files to upload">
+                <button type="submit">Upload</button>
+            </form>
+            <p id="upload-status" class="muted" role="status"></p>
+            <div id="documents"></div>
+        </section>
+
+        <section class="panel">
+            <h2>3. Search</h2>
+            <form id="search-form" class="row">
+                <input id="query" type="text" maxlength="500" placeholder="Try: breast cancer" aria-label="Search words">
+                <select id="method" aria-label="Ranking method"></select>
+                <select id="top-k" aria-label="Number of results">
+                    <option value="5">Top 5</option>
+                    <option value="10" selected>Top 10</option>
+                    <option value="20">Top 20</option>
+                </select>
+                <button type="submit">Search</button>
+            </form>
+            <p id="status" class="muted" role="status"></p>
+            <div id="results"></div>
+        </section>
+    </main>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
